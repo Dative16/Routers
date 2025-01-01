@@ -1,0 +1,368 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkayBack</title>
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- home section starts here  -->
+    <section class="home">
+        <div class="home-box">
+            <nav>
+                <div class="logo bars">
+                    <div class="bar">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                    <h3>SkayBack</h3>
+                </div>
+                <div class="menu">
+                    <div class="close">
+                        <i class="fa fa-close"></i>
+                    </div>
+                    <ul>
+                        <li><a href="#content">home</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">travel packages</a></li>
+                        <li><a href="#">destinatons</a></li>
+                        <li><a href="#">careers</a></li>
+                    </ul>
+                </div>
+                <div class="signup-login">
+                    <a href="#">sign up</a>
+                    <a href="#">login</a>
+                </div>
+            </nav>
+
+            <div class="content">
+                <h5>SkayBack</h5>
+                <h1>Let's connect you to the internet of your dreams!</h1>
+                <p>Discover reliable connections, create seamless online experiences, and shop with confidence – your digital journey starts here!</p>
+
+                <div class="search">
+                    <i class="fa fa-search"></i>
+                    <input type="text" placeholder="your jouney begins with a search...">
+                    <button>search</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- home section ends here  -->
+
+    <!-- travel section starts here  -->
+    <section class="travel">
+        <div class="container">
+            <div class="box box1">
+                <img src="{% static 'home/images/planning.png' %}" alt="">
+                <div class="content">
+                    <h4>Seamless Connectivity Solutions</h4>
+                    <p>Experience hassle-free internet setup and management. Our routers ensure smooth connections, while our vouchers provide unbeatable deals for your online needs.</p>
+                </div>
+            </div>
+            <div class="box box2">
+                <img src="{% static 'home/images/map.png' %}" alt="">
+                <div class="content">
+                    <h4>Tailored Internet Experiences</h4>
+                    <p>Enjoy customized solutions that fit your lifestyle. From gaming to streaming, our routers cater to your specific requirements, ensuring optimal performance every time.</p>
+                </div>
+            </div>
+            <div class="box box3">
+                <img src="{% static 'home/images/trust.png' %}" alt="">
+                <div class="content">
+                    <h4>Reliable and Trustworthy Service</h4>
+                    <p>Count on us for dependable products and exceptional customer support. We prioritize your satisfaction with high-quality routers and valuable vouchers that enhance your online experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- travel section ends here  -->
+
+    <!-- destinatons section starts here  -->
+    <section class="destinations">
+        <h4 class="label">destinations</h4>
+        <div class="container">
+            <div class="container-box">
+                <h2 class="heading">City Wi-Fi Solutions and Nature Connectivity Packages</h2>
+                <div class="content">
+                    <p>Our city Wi-Fi solutions provide fast and reliable internet for urban living, while our nature connectivity packages ensure you stay connected even in remote areas. Experience seamless streaming, gaming, and browsing wherever you are.</p>
+                    <a href="#">explore more <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="gallery">
+                <div class="box box1">
+                    <img src="{% static 'home/images/home-background.jpg' %}" alt="">
+                    <div class="text">
+                        <h2>Control Over Your City Wherever You Go</h2>
+                    </div>
+                </div>
+                <div class="box box2">
+                    <img src="{% static 'home/images/destinations-1.jpg' %}" alt="">
+                    <div class="text">
+                        <h2>With Extreemed Speed</h2>
+                    </div>
+                </div>
+                <div class="box box3">
+                    <img src="{% static 'home/images/destinations-2.jpg' %}" alt="">
+                    <div class="text">
+                        <h2>The Whole World In Your Hand</h2>
+                    </div>
+                </div>
+                <div class="box box4">
+                    <img src="{% static 'home/images/destinations-3.jpg' %}" alt="">
+                    <div class="text">
+                        <h2>Just A Single Click</h2>
+                    </div>
+                </div>
+                <div class="box box5">
+                    <img src="{% static 'home/images/destinations-4.jpg' %}" alt="">
+                    <div class="text">
+                        <h2>Your Home In Your Hand</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- destinatons section ends here  -->
+
+    <!-- featured section starts here  -->
+    <section class="featured">
+        <div class="gallery">
+            <div class="box box1">
+                <div class="first-box">
+                    <h4 class="label">featured offers</h4>
+                    <h2 class="heading">unlock exclusive Internet Packages deals</h2>
+                    <p>
+                        Connect to the best internet solutions, enjoy unbeatable offers, and shop confidently – your online experience begins here!
+                    </p>
+                    <a href="#">show more</a>
+                    <div class="image">
+                        <img src="{% static 'home/images/plane.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="box box2">
+                <img src="{% static 'home/images/featured-1.jpg' %}" alt="">
+                <div class="content">
+                    <h2>Internate Daily/Siku</h2>
+                    <p>gill trawangan, lombok</p>
+                    <div class="review-and-idr">
+                        <div class="review"><i class="fa fa-star"></i> 4.9 | 853 review</div>
+                        <p>MB 500 | TZs 2,000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box box3">
+                <img src="{% static 'home/images/featured-2.jpg' %}" alt="">
+                <div class="content">
+                    <h2>Internate Daily/Siku</h2>
+                    <p>gill trawangan, lombok</p>
+                    <div class="review-and-idr">
+                        <div class="review"><i class="fa fa-star"></i> 4.9 | 853 review</div>
+                        <p>MB 500 | TZs 2,000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box box4">
+                <img src="{% static 'home/images/featured-3.jpg' %}" alt="">
+                <div class="content">
+                    <h2>Internate Daily/Siku</h2>
+                    <p>gill trawangan, lombok</p>
+                    <div class="review-and-idr">
+                        <div class="review"><i class="fa fa-star"></i> 4.9 | 853 review</div>
+                        <p>MB 500 | TZs 2,000</p>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <!-- featured section ends here  -->
+
+    <!-- feedback section starts here  -->
+    <section class="feedback">
+        <div class="container">
+            <h4 class="label">adventure's voices</h4>
+            <h2 class="heading">adventurer's voices</h2>
+            <p class="paragraph">
+                real stories from our sdenturours community
+            </p>
+        </div>
+
+        <div class="voices">
+            <div class="voice box1">
+                <div class="profile">
+                    <img src="{% static 'home/images/photo1.jpg' %}" alt="">
+                    <div class="detail">
+                        <li>marvin davin</li>
+                        <li>customer</li>
+                    </div>
+                </div>
+                <p>"The city Wi-Fi has been a game-changer for my business. I can now reliably connect with clients and access important online tools no matter where I am in the city. The speeds are lightning-fast!"</p>
+            </div>
+            <div class="voice box2">
+                <div class="profile">
+                    <img src="{% static 'home/images/photo2.jpg' %}" alt="">
+                    <div class="detail">
+                        <li>marvin davin</li>
+                        <li>customer</li>
+                    </div>
+                </div>
+                <p>"As an avid hiker, I love how the nature connectivity packages keep me connected even in remote areas. I can stream music, check maps, and stay in touch with loved ones without worrying about losing signal." - Michael,"</p>
+            </div>
+            <div class="voice box3">
+                <div class="profile">
+                    <img src="{% static 'home/images/photo3.jpg' %}" alt="">
+                    <div class="detail">
+                        <li>marvin davin</li>
+                        <li>customer</li>
+                    </div>
+                </div>
+                <p>"I was skeptical at first, but your Wi-Fi solutions have exceeded all my expectations. The coverage is fantastic, and I've had zero connectivity issues since switching. Highly recommend to anyone in the city!"</p>
+            </div>
+            <div class="voice box4">
+                <div class="profile">
+                    <img src="{% static 'home/images/photo4.jpg' %}" alt="">
+                    <div class="detail">
+                        <li>marvin davin</li>
+                        <li>customer</li>
+                    </div>
+                </div>
+                <p>"Being able to stay connected while camping has made all the difference. The nature packages provide a reliable, high-speed internet experience that enhances my whole outdoor experience."</p>
+            </div>
+            <div class="voice box5">
+                <div class="profile">
+                    <img src="{% static 'home/images/photo5.jpg' %}" alt="">
+                    <div class="detail">
+                        <li>marvin davin</li>
+                        <li>customer</li>
+                    </div>
+                </div>
+                <p>"As a remote worker, having access to fast, reliable Wi-Fi has been crucial. Your city offerings have allowed me to be productive from anywhere, without disruptions or frustrating lag times."</p>
+            </div>
+            <div class="voice box6">
+                <div class="profile">
+                    <img src="{% static 'home/images/photo6.jpg' %}" alt="">
+                    <div class="detail">
+                        <li>marvin davin</li>
+                        <li>customer</li>
+                    </div>
+                </div>
+                <p>"The transition to your Wi-Fi services was seamless. The setup was easy, and the customer support has been fantastic. I'm so glad I made the switch - it's been life-changing for my family."</p>
+            </div>
+        </div>
+    </section>
+    <!-- feedback section ends here  -->
+
+    <!-- article section starts here  -->
+    <section class="article">
+        <h4 class="label">resources</h4>
+        <h2 class="heading">latest article</h2>
+        <div class="container">
+            <div class="latest-article">
+                <img src="{% static 'home/images/hidden-game.jpg' %}" alt="">
+                <p>Trusfuly discovery</p>
+                <h3>The transition to your Wi-Fi services was seamless. The setup was easy, and the customer support has been fantastic. I'm so glad I made the switch - it's been life-changing for my family</h3>
+                <div class="author">
+                    <img src="{% static 'home/images/photo7.jpg' %}" alt="">
+                    <p>sandy aldiansyah - 9 min read</p>
+                </div>
+            </div>
+            <div class="more-article">
+                <div class="box box1">
+                    <div class="image">
+                        <img src="{% static 'home/images/family.jpg' %}" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>The city Wi-Fi has been a game-changer for my business. I can now reliably connect with clients and access important online tools no matter where I am in the city. The speeds are lightning-fast!</h3>
+                        <li>Sarah, Small Business Owner</li>
+                    </div>
+                </div>
+                <div class="box box2">
+                    <div class="image">
+                        <img src="{% static 'home/images/food-article.jpg' %}" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>As an avid hiker, I love how the nature connectivity packages keep me connected even in remote areas. I can stream music, check maps, and stay in touch with loved ones without worrying about losing signal.</h3>
+                        <li>Michael, Outdoor Enthusiast</li>
+                    </div>
+                </div>
+                <div class="box box3">
+                    <div class="image">
+                        <img src="{% static 'home/images/budget-travel.jpg' %}" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>The transition to your Wi-Fi services was seamless. The setup was easy, and the customer support has been fantastic.</h3>
+                        <li>Samantha, Homeowner</li>
+                    </div>
+                </div>
+                <div class="box box4">
+                    <div class="image">
+                        <img src="{% static 'home/images/tips.jpg' %}" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>As a remote worker, having access to fast, reliable Wi-Fi has been crucial. Your city offerings have allowed me to be productive from anywhere, without disruptions or frustrating lag times.</h3>
+                        <li>Alex, Digital Nomad</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- article section ends here  -->
+
+    <!-- footer section starts here  -->
+    <footer>
+        <section class="footer">
+            <div class="container">
+                <div class="detail">
+                    <h3>SkayBack</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere in, non praesentium soluta quis enim aperiam aliquam, rem totam porro, vel obcaecati modi architecto error maiores iusto quaerat aut eum.</p>
+                    <h5>get in touch</h5>
+                    <a href="#">example@mail.com</a>
+                    <div class="social">
+                        <a href="#"><i class="fa fa-linkedin-square"></i></a>
+                        <a href="#"><i class="fa fa-facebook-square"></i></a>
+                        <a href="#"><i class="fa fa-twitter-square"></i></a>
+                    </div>
+                </div>
+                <div class="about-us">
+                    <h4>about us</h4>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">our term</a></li>
+                    <li><a href="#">careers <span>we're hiring!</span></a></li>
+                    <li><a href="#">mission and values</a></li>
+                    <li><a href="#">partnerships</a></li>
+                </div>
+                <div class="about-us">
+                    <h4>help</h4>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">booking guide</a></li>
+                    <li><a href="#">cancellation policy</a></li>
+                    <li><a href="#">site map</a></li>
+                </div>
+                <div class="about-us">
+                    <h4>Resources</h4>
+                    <li><a href="#">newsletter</a></li>
+                    <li><a href="#">blog</a></li>
+                    <li><a href="#">gallery</li>
+                    <li><a href="#">offers</a></li>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <div>
+                    &copy;<script>document.write(new Date().getFullYear())</script> - SkayBack, all rights reserved
+                </div>
+                <div>
+                    <a href="#">term & conditions</a>
+                    <a href="#">privacy policy</a>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- footer section ends here  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js" integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{% static 'home/js/scrip.js' %}"></script>
+</body>
+</html>
