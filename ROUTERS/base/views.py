@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import *
-from .models import Account
+from .models import Account, CustomPasswordException
 from django.contrib import messages, auth
 from django.contrib.auth.decorators import login_required
 
@@ -25,19 +25,22 @@ def register_user(request):
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
         if form.is_valid():
-            first_name = form.cleaned_data['first_name']
-            last_name = form.cleaned_data['last_name']
-            email = form.cleaned_data['email']
-            password = form.cleaned_data['password']
-            phone_number = form.cleaned_data['phone_number']
-            username = email.split("@")[0]
-            user = Account.objects.create_user(first_name=first_name, last_name=last_name, email=email,
-                                               username=username, password=password)
-            
-            user.phone_number = phone_number
-            user.save()
-            messages.success(request, 'You have Been Registered, Check Your Email to Confirm Registration')
-            return redirect('login')
+            try:
+                first_name = form.cleaned_data['first_name']
+                last_name = form.cleaned_data['last_name']
+                email = form.cleaned_data['email']
+                password = form.cleaned_data['password']
+                phone_number = form.cleaned_data['phone_number']
+                username = email.split("@")[0]
+                user = Account.objects.create_user(first_name=first_name, last_name=last_name, email=email,
+                                                  username=username, password=password)
+                user.phone_number = phone_number
+                user.save()
+                messages.success(request, 'You have Been Registered, Check Your Email to Confirm Registration')
+                return redirect('login')
+            except CustomPasswordException as e:
+                messages.error(request, str(e))
+                return redirect('register')
         else:
             messages.error(request, str(form.errors))
             return redirect('register')

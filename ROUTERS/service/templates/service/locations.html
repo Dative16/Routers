@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Password Reset - SkayBack</title>
+        <title>Buy a Voucher</title>
         <link href="{% static 'services/css/styles.css' %}" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
@@ -15,23 +15,35 @@
         <div id="layoutAuthentication">
             <div id="layoutAuthentication_content">
                 <main>
-                    {% include "base/alerts.html" %}
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-5">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Password Recovery</h3></div>
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Buy Voucher</h3></div>
                                     <div class="card-body">
-                                        <div class="small mb-3 text-muted">Enter your email address and we will send you a link to reset your password.</div>
-                                        <form method="POST">
-                                            {% csrf_token %}
+                                        <form>
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="inputEmail" type="email" placeholder="name@example.com" name="email" />
-                                                <label for="inputEmail">Email address</label>
+                                                <input class="form-control" id="inputLocation" type="text" placeholder="select Your Location" list="location_list"/>
+                                                <datalist id="location_list">
+                                                    <select id="location">
+                                                      <option value="">Select Location</option>
+                                                        
+                                                        <option value="Mbeya">Mbeya</option>
+                                                        <option value="Dodoma">Dodoma</option>
+                                                        <option value="Mbeya Mjini">Mbeya Mjini</option>
+                                                        <option value="Dar es Salaam">Dar es Salaam</option>
+                                                        <option value="Makambako">Makambako</option>
+                                                    
+                                                    </select>
+                                                  </datalist>
+                                                <label for="inputLocation">Location </label>
+                                            </div>
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" id="inputRememberPassword" type="checkbox" value="" />
+                                                <label class="form-check-label" for="inputRememberPassword">Remember Me</label>
                                             </div>
                                             <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                <a class="small" href="{% url 'login' %}">Return to login</a>
-                                                <button class="btn btn-primary" type="submit">Reset Password</button>
+                                                <a class="btn btn-primary" href="{% url 'processing_payments' %}">Submit</a>
                                             </div>
                                         </form>
                                     </div>

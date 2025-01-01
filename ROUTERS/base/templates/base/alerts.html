@@ -1,0 +1,105 @@
+<style>
+    .message-container {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 9999;
+        width: 300px;
+        animation: slideIn 0.5s ease-in-out;
+      }
+      
+      .alert {
+        padding: 15px;
+        border-radius: 4px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      
+      .alert-success {
+        background-color: #d4edda;
+        color: #155724;
+      }
+      
+      .alert-error {
+        background-color: #f8d7da;
+        color: #721c24;
+      }
+      
+      .close-btn {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        color: inherit;
+      }
+      
+      @keyframes slideIn {
+        0% {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      
+</style>
+
+{% if messages %}
+  {% for message in messages %}
+    <div id="message-{{ forloop.counter }}" class="message-container">
+      <div {% if message.tags %} class="alert alert-{{ message.tags }}"{% endif %} role="alert">
+        <button type="button" class="close-btn" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="message-content">
+          {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Error: {% endif %}
+          {{ message }}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+{% endif %}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var messages = document.querySelectorAll('.message-container');
+      
+        messages.forEach(function(message, index) {
+          var closeBtn = message.querySelector('.close-btn');
+          var messageId = 'message-' + (index + 1);
+      
+          closeBtn.addEventListener('click', function() {
+            hideMessage(messageId);
+          });
+      
+          setTimeout(function() {
+            hideMessage(messageId);
+          }, 10000); // Hide the message after 10 seconds
+        });
+      });
+      
+      function hideMessage(messageId) {
+        var message = document.getElementById(messageId);
+        message.style.animation = 'slideOut 0.5s ease-in-out forwards';
+      
+        setTimeout(function() {
+          message.remove();
+        }, 500); // Remove the message after the animation is complete
+      }
+      
+      @keyframes slideOut {
+        0% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+        100% {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+      }
+      
+</script>

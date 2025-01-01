@@ -6,6 +6,10 @@ from django.urls import reverse
 from django.utils.text import slugify
 # Create your models here.
 
+
+class CustomPasswordException(Exception):
+    pass
+
 class MyAccountManager(BaseUserManager):
     
 
@@ -16,13 +20,16 @@ class MyAccountManager(BaseUserManager):
         return re.match(email_regex, email) is not None
 
     def is_password_strong(self, password):
-        # Check password complexity
-        return (
-            len(password) >= 8 and 
-            any(char.isupper() for char in password) and
-            any(char.islower() for char in password) and
-            any(char.isdigit() for char in password)
-        )
+    # Check password complexity
+        if (
+            len(password) < 8 or
+            not any(char.isupper() for char in password) or
+            not any(char.islower() for char in password) or
+            not any(char.isdigit() for char in password)
+        ):
+            raise CustomPasswordException("Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, and one digit.")
+        return True
+    
     def create_superuser(self, first_name, last_name, email, username, password):
         user = self.create_user(
             email=self.normalize_email(email),
