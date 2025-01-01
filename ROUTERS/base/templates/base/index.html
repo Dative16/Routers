@@ -349,7 +349,7 @@
                     <li><a href="#">gallery</li>
                     {% if request.user.is_authenticated and request.user.is_admin %}
 
-                    <li><a href="{% url 'dashboard' %}">DASHBOARD</a></li>
+                    <li><a href="{% url 'dashboard' %}" target="_blank">DASHBOARD</a></li>
                     {% else %}
                     <li><a href="#">offers</a></li>
                     {% endif %}
